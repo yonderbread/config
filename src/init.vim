@@ -46,7 +46,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 Plug 'linkinpark342/xonsh-vim'
 Plug 'daveyarwood/vim-alda'
 
@@ -83,4 +83,6 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
 
 "        _______________________
 "       { V~I~M~D~E~V~I~C~O~N~S }
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#buffer_nr_show = 1

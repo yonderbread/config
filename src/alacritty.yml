@@ -30,7 +30,7 @@ window:
         multiplier: 1
     font:
         normal:
-            family: "SauceCodePro Nerd Font Mono"
+            family: "SourceCodePro Nerd Font Mono"
             style: Regular
         bold:
             family: "SauceCodePro Nerd Font Mono"
