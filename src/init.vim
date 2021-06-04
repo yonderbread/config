@@ -11,6 +11,7 @@ set number
 set ruler
 set t_Co=256
 set cursorline
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lum]"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
