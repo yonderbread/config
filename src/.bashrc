@@ -124,3 +124,7 @@ export DNVIM_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/nvim/site/pack/discord.n
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# .NET PATH
+export DOTNET_ROOT=$HOME/bin/dotnet
+export PATH=$PATH:$HOME/dotnet
