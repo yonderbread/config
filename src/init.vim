@@ -17,10 +17,12 @@ if exists('+termguicolors')
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum]"
   set termguicolors
 endif
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 " set cc=80
 
 syntax on
 filetype plugin indent on
+filetype plugin on
 
 "        _______________
 "       { P~L~U~G~I~N~S }
@@ -30,7 +32,8 @@ filetype plugin indent on
 
 call plug#begin(stdpath('config') . '/plugged')
 Plug 'junegunn/vim-easy-align'
-Plug 'junegun/fzf'
+" Plugin not available anymore?!
+" Plug 'junegun/fzf'
 Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
@@ -50,11 +53,19 @@ Plug 'linkinpark342/xonsh-vim'
 Plug 'daveyarwood/vim-alda'
 
 " Nerdtree and plugins for it
-Plug 'scrooloose/nerdtree' |
-  \ Plug 'Xuyuanp/nerdtree-git-plugin' |
-  \ Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
   
 call plug#end()
+
+"    ___________________________
+"   { C~O~C~E~X~T~E~N~S~I~O~N~S }
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-cmake', 'coc-css', 'coc-discord',
+            \ 'coc-elixir', 'coc-eslint', 'coc-flutter', 'coc-gist', 'coc-go',
+            \ 'coc-graphql', 'coc-html', 'coc-htmldjango', 'coc-java', 'coc-markdownlint',
+            \ 'coc-powershell', 'coc-prettier', 'coc-python', 'coc-pydocstring',
+            \ 'coc-sh', 'coc-svg', 'coc-sql', 'coc-toml', 'coc-xml', 'coc-yaml']
 
 "     _______________________
 "    { C~O~L~O~R~S~C~H~E~M~E }
@@ -76,12 +87,22 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Unknown'   :'?',
                 \ }
 let g:NERDTreeGitStatusUseNerdFonts = 1
+let NERDTreeShowHidden = 1
+" Sym links
+syn match NERDTreeLinkTarget #->.*# containedin=NERDTreeDir,NERDTreeFile
+syn match NERDTreeLinkFile #.* ->#me=e-3 containedin=NERDTreeFile
+syn match NERDTreeLinkDir #.*/ ->#me=e-3 containedin=NERDTreeDir
+
+" File types
+
+
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
     \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
 
 "        _______________________
 "       { V~I~M~D~E~V~I~C~O~N~S }
-" let g:airline_powerline_fonts = 1
+
+"let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline#extensions#tabline#buffer_nr_show = 1
