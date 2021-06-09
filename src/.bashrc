@@ -128,3 +128,4 @@ export NVM_DIR="$HOME/.nvm"
 # .NET PATH
 export DOTNET_ROOT=$HOME/bin/dotnet
 export PATH=$PATH:$HOME/dotnet
+export PATH=$PATH:/usr/local/go/bin
