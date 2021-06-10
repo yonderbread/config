@@ -31,9 +31,6 @@
     white:   '#eff0eb'
 
 window:
-    padding:
-        x: 7
-        "y": 7
     scrolling:
         history: 100000
         multiplier: 1
