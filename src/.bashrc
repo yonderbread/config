@@ -130,4 +130,10 @@ export DOTNET_ROOT=$HOME/bin/dotnet
 export PATH=$PATH:$HOME/dotnet
 export PATH=$PATH:/usr/local/go/bin
 
+# NODEJS/NPM
+export NPM_PACKAGES="${HOME}/.npmpkgs"
+export NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+unset MANPATH
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
 colorscript -r
