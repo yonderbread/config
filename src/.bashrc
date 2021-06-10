@@ -129,3 +129,5 @@ export NVM_DIR="$HOME/.nvm"
 export DOTNET_ROOT=$HOME/bin/dotnet
 export PATH=$PATH:$HOME/dotnet
 export PATH=$PATH:/usr/local/go/bin
+
+colorscript -r
