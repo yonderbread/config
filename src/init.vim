@@ -1,6 +1,8 @@
 "        _________________
 "       { S~E~T~T~I~N~G~S }
 
+set noswapfile
+set nobackup
 set encoding=UTF-8
 set showmatch
 set hlsearch
