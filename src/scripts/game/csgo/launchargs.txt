@@ -1,1 +1,1 @@
--high -novid -nojoy -forcenovsync -refresh 144 -tickrate 128 +fps_max 0 -fullscreen +cl_forcepreload 1 +r_dynamic 0 +exec autoexec.cfg
+-high -novid -nojoy -forcenovsync -limitvsconst -softparticlesdefaultoff -refresh 144 +fps_max 0 -fullscreen +cl_forcepreload 1 +r_dynamic 0 -tickrate 128 +exec autoexec.cfg
