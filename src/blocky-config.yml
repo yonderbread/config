@@ -1,0 +1,31 @@
+upstream:
+    externalResolvers:
+        - 9.9.9.9
+        - 149.112.112.112
+        - 208.67.222.222
+        - https://dns.quad9.net/dns-query
+blocking:
+    blackLists:
+        all:
+            - https://blocklistproject.github.io/Lists/abuse.txt
+            - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+            - https://blocklistproject.github.io/Lists/ads.txt
+            - https://blocklistproject.github.io/Lists/crypto.txt
+            - https://blocklistproject.github.io/Lists/drugs.txt
+            - https://blocklistproject.github.io/Lists/facebook.txt
+            - https://blocklistproject.github.io/Lists/fraud.txt
+            - https://blocklistproject.github.io/Lists/gambling.txt
+            - https://blocklistproject.github.io/Lists/malware.txt
+            - https://blocklistproject.github.io/Lists/phishing.txt
+            - https://blocklistproject.github.io/Lists/ransomware.txt
+            - https://blocklistproject.github.io/Lists/scam.txt
+            - https://blocklistproject.github.io/Lists/tracking.txt
+            - https://justdomains.github.io/blocklists/lists/easylist-justdomains.txt
+            - https://justdomains.github.io/blocklists/lists/easyprivacy-justdomains.txt
+            - https://justdomains.github.io/blocklists/lists/adguarddns-justdomains.txt
+            - https://justdomains.github.io/blocklists/lists/nocoin-justdomains.txt
+    clientGroupsBlock:
+        default:
+            - all
+port: 53
+httpPort: 4000 
