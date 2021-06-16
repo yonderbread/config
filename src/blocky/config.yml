@@ -27,5 +27,5 @@ blocking:
     clientGroupsBlock:
         default:
             - all
-port: 53
+port: 953
 httpPort: 4000 
