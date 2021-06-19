@@ -10,4 +10,3 @@ services:
             - "4000:4000/tcp"
         volumes:
             - ./config.yml:/app/config.yml
-
